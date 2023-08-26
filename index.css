@@ -1,0 +1,137 @@
+:root{
+    --cell-border-color: rgb(255, 8, 119);
+    --input-focus-background-color:rgb(199, 202, 179);
+    --hint-number-background-color:grey;
+    --hint-number-text-color:aliceblue;
+    --input-hover-background-color: floralwhite;
+    --solve-btn-background-color: #105c06;
+    --solve-btn-hover-background-color: #42e13c;
+    --new-game-btn-background-color: rgb(255, 166, 0);
+    --new-game-btn-hover-background-color:rgb(255, 234, 0);
+  }
+  
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  body{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .game h1 {
+    color: rgb(5, 30, 83);
+    text-decoration: underline;
+    font-weight: 700;
+    font-size: 90px;
+    text-align: center;
+}
+  
+  .game{
+    display: flex;
+    flex-flow:column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Table */
+  table{
+    border-collapse: collapse;
+    border-spacing:0;
+    
+  }
+  
+  td{
+    border: 1px solid var(--cell-border-color);
+    font-size: 1rem;
+  }
+  
+  .border-top{
+    border-top: 1px solid black;
+  }
+  
+  .border-left{
+    border-left: 1px solid black;
+  }
+  
+  .border-right{
+    border-right: 1px solid black;
+  }
+  
+  .border-bottom{
+    border-bottom: 1px solid black;
+  }
+  
+  /* input */
+  input{
+    width: 75px;
+    height: 75px;
+    border:none;
+    padding: 0 !important;
+    text-align: center;
+    font-size: 1.3rem;
+  }
+  
+  td>input:focus{
+    outline: none;
+    background:var(--input-focus-background-color) !important;
+  }
+  
+  input.finished{
+    cursor:default;
+    pointer-events: none;
+  }
+  
+  input.finished.hint{
+    background-color: var(--hint-number-background-color);
+    color:var(--hint-number-text-color)
+  }
+  
+  td:hover>input{
+    background-color: var(--input-hover-background-color);
+  }
+  
+  /* Buttons */
+  .buttons{
+    display: flex;
+  }
+  
+  .button{
+    width: 70px;
+    height: 70px;
+    border:none;
+    border-radius: 10px;
+    color: rgb(230, 230, 230);
+    cursor: pointer;
+    transition: all .3s;
+    margin: 10px 5px;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  #solveButton{
+    background-color: var(--solve-btn-background-color);
+  }
+  
+  #solveButton:hover{
+    background-color: var(--solve-btn-hover-background-color);
+  }
+  
+  #newButton{
+    background-color: var(--new-game-btn-background-color);
+  }
+  
+  #newButton:hover{
+    background-color: var(--new-game-btn-hover-background-color);
+  }
